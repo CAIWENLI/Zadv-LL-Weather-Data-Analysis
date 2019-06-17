@@ -1,6 +1,6 @@
 ---
 title: "rnoaa - Weather"
-author: "Doris Sun/ Lisa Li"
+author: "Lisa Li"
 date: "6/6/2019"
 output: html_document
 ---
@@ -38,7 +38,7 @@ test <- test$data
 
 ```
 
-```{r}
+```{r exploring}
 # Fetch list of city locations in descending order
 ncdc_locs(locationcategoryid='CITY', sortfield='name', sortorder='desc')
 
@@ -95,9 +95,6 @@ argo_search("list", "dac")
 x <- argo_buoy_files(dac = "meds", id = 4900881)
 argo(dac = "meds", id = 4900881, cycle = 127, dtype = "D")
 
-```
-
-```{r }
 # data
 out1 <- ncdc(datasetid='GHCND', locationid = 'FIPS:02', startdate = '2010-05-01',
 enddate = '2010-05-31', limit=10)
